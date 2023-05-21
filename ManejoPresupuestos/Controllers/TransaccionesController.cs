@@ -43,7 +43,7 @@ public class TransaccionesController : Controller
 
         var cuenta = await _repositorioCuentas.ObtenerPorId(modelo.CuentaId, usuarioId);
 
-        if (cuenta == null)
+        if (cuenta is null)
         {
             return RedirectToAction("NoEncontrado", "Home");
         }
